@@ -1,7 +1,6 @@
 {% set name = "svg2png" %}
 {% set version = "4.1.1" %}
 {% set sha256 = "6fa41166e7532592fb60cfb71e9e37e7eec1998136c06bc1b981d724bfd13ef7" %}
-{% set node_version = os.environ.get('NODEJS_VERSION') or '6.*' %}
 
 package:
   name: {{ name }}
@@ -17,10 +16,10 @@ build:
   script: npm install . && npm install -g
 
 requirements:
-  build:
-    - nodejs {{ node_version }}
+  host:
+    - nodejs
   run:
-    - nodejs {{ node_version }}
+    - nodejs
 
 test:
   commands:
