@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/domenic/svg2png/tarball/5997ae9452796f480c13506c32cb04d1dc38369e
-  sha256: 6fa41166e7532592fb60cfb71e9e37e7eec1998136c06bc1b981d724bfd13ef7
+  url: https://github.com/domenic/svg2png/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 55a0a8f7936d24d8e0b4e31f2c3ad11ea97a3daac1b8fbc12e745cf45bffaee0
 
 build:
   number: 4
@@ -24,7 +24,7 @@ requirements:
 
 test:
   commands:
-     - npm list -g {{ name }}
+     - svg2png --help
 
 about:
   home: https://github.com/domenic/svg2png

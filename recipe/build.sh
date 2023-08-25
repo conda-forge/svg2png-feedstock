@@ -14,7 +14,8 @@ ln -s $BUILD_PREFIX/bin/node $PREFIX/bin/node
 
 NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc
 
-pnpm import
+# Package doesn't have a lockfile
+# pnpm import
 pnpm install --prod
 pnpm pack
 npm install -g ${PKG_NAME}-${PKG_VERSION}.tgz
