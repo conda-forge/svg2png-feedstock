@@ -11,11 +11,14 @@ source:
 
 build:
   number: 4
-  script: npm install . && npm install -g
 
 requirements:
+  build:
+    - nodejs  # [unix]
   host:
     - nodejs
+    - pnpm
+    - pnpm-licenses
   run:
     - nodejs
 
@@ -33,3 +36,4 @@ extra:
   recipe-maintainers:
     - Dimitar-92
     - ArchB1aZe
+    - xhochy
